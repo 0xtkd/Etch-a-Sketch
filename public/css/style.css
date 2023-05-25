@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 5% 10%;
+}
+
+.container {
+    width: 960px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* flex: 1; */
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 15px 10px;
+}
+
+.grid-row {
+    /* border: 1px solid #000;  */
+    background-color: aliceblue;
+    min-height: 10px;
+    display: flex;
+    justify-content: center; 
+    flex: 1;
+}
+
+.grid-box {
+    border: 1px solid #000;
+    background-color: rgb(4, 58, 106);
+    width: 30px;
+    height: 30px;
+    min-height: 10px;
+    min-width: 10px;
+    margin: -1;
+}
