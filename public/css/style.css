@@ -24,7 +24,7 @@ body {
 }
 
 .grid-row {
-    /* border: 1px solid #000;  */
+    border: 1px solid #a70000; 
     background-color: aliceblue;
     min-height: 10px;
     display: flex;
@@ -33,7 +33,7 @@ body {
 }
 
 .grid-box {
-    border: 1px solid #000;
+    border: 1px solid #151515;
     background-color: rgb(4, 58, 106);
     width: 30px;
     height: 30px;

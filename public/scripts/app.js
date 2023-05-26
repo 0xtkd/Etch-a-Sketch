@@ -20,18 +20,19 @@ const squareCreator = (grids = 16) => {
 
     container.append(gridsContainer);
 
+    // Hover effect
+    function hoverAnimations () {
+        const gridsDivs = document.querySelectorAll('.grid-box');
+        gridsDivs.forEach(gridDiv => {
+            gridDiv.addEventListener('mouseover', function (event) {
+                console.log('hovering');
+                this.style.background = 'lightblue';
+            });
+        });
+    }  
+
     hoverAnimations()
 };
-
-function hoverAnimations () {
-    const gridsDivs = document.querySelectorAll('.grid-box');
-    gridsDivs.forEach(gridDiv => {
-        gridDiv.addEventListener('mouseover', function (event) {
-            console.log('hovering');
-            this.style.background = 'lightblue';
-        });
-    });
-}
 
 squareCreator();
 
@@ -41,8 +42,8 @@ button.forEach(b => {
         console.log('clicked')
         let rowsCeils = prompt('Please Enter the value for the grid to displayed');
     
-        if ((rowsCeils.length > 0 && typeof rowsCeils === 'string')) {
-            let removeDivs = document.querySelectorAll('.grid-container > div.grid-box');
+        if (rowsCeils.length > 0) {
+            let removeDivs = document.querySelectorAll('div.grid-row');
             removeDivs.forEach(div => {
                 div.remove();
             })
@@ -54,4 +55,7 @@ button.forEach(b => {
 });
 
 
+// to do list
+// dynamically resizing my square elements using javascript
+// 
 
