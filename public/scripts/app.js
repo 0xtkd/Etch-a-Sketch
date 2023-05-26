@@ -2,6 +2,7 @@ const container = document.querySelector('.container');
 const gridsContainer = document.querySelector('.grid-container');
 
 const squareCreator = (grids = 16) => {
+    let gridsSize = 960 / grids;
 
     for (let i = 0; i < grids; i++) {
         let row_Div = document.createElement('div');
@@ -9,6 +10,8 @@ const squareCreator = (grids = 16) => {
 
         for (let j = 0; j < grids; j++) {
             let box_Div = document.createElement('div');
+            box_Div.style.width = `${gridsSize}px`;
+            box_Div.style.height = `${gridsSize}px`;
             box_Div.classList.add(`grid-box`);
 
             row_Div.append(box_Div);
@@ -26,7 +29,7 @@ const squareCreator = (grids = 16) => {
         gridsDivs.forEach(gridDiv => {
             gridDiv.addEventListener('mouseover', function (event) {
                 console.log('hovering');
-                this.style.background = 'lightblue';
+                this.style.background = '#f8f8f8';
             });
         });
     }  
@@ -36,7 +39,7 @@ const squareCreator = (grids = 16) => {
 
 squareCreator();
 
-const button = document.querySelectorAll('button');
+const button = document.querySelectorAll('button.button');
 button.forEach(b => {
     b.addEventListener('click', function (event) {
         console.log('clicked')
