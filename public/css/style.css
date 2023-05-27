@@ -30,6 +30,7 @@ body {
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
+    padding-bottom: 3%;
 }
 
 /* grid container size */
@@ -53,14 +54,14 @@ body {
 /* Options and settings section */
 
 .options-container {
-    height: 320px;
+    /* height: 320px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
     color: #fff;
     background-color: #000000;
-    padding: 20px 15px;
+    padding: 25px 15px;
 }
 
 /* h4{} */
@@ -77,7 +78,7 @@ div.color > span{
     bottom: 8px;
 }
 
-.button, .clear {
+.button, .clear, .reset {
     padding: 15px 10px;
     background-color: rgb(40, 48, 55);
     border: 4px outset rgba(255, 255, 255, 0.8); 
@@ -85,12 +86,12 @@ div.color > span{
     color: #fff;
 }
 
-.clear {
+.clear, .reset {
     border: 4px inset rgba(255, 255, 255, 0.8); 
 }
 
 input[type="color"] {
-	-webkit-appearance: none;
+	/* -webkit-appearance: none; */
 	border: none;
 	width: 32px;
 	height: 32px;
